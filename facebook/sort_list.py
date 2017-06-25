@@ -1,4 +1,4 @@
-########################Task-1 Generate list for sort [1,2,3,5,6,0,0,0]########################
+########################Task-1 Generate list for sort [1,2,3,5,6,0,0,0] ########################
 list = [5,2,0,3,0,1,6,0]
 list.sort(key=int)
 
@@ -6,7 +6,7 @@ list1 =  list[0:3]
 list2 = list[3:]
 list_end = list2 + list1
 
-########################Task2 - Generate list for sort [1,2,3,5,6,0,0,0]########################
+########################Task2 - Generate list for sort [1,2,3,5,6,0,0,0] ########################
 print list_end
 
 
@@ -25,7 +25,7 @@ def srted_list(list):
 
 srted_list(mylist)
 
-########################Task3 - Concatenate the list values########################
+########################Task3 - Concatenate the list values ########################
 my_list = ['p','r','o','b','e']
 
 def con_word(list):
@@ -35,7 +35,7 @@ def con_word(list):
         word += list[key]
     print word
 con_word(my_list)
-########################Task4 - Print quantity of values from the list which have the same value in [1:-1]########################    
+########################Task4 - Print quantity of values from the list which have the same value in [1:-1] ########################    
 count_str = ['abc', 'xyz', 'aba', '1221']
 
 def len2(list):
@@ -45,7 +45,7 @@ def len2(list):
             words += 1
     print words
 len2(count_str)
-########################Task5 - Remove dublicates from list########################
+########################Task5 - Remove dublicates from list ########################
 list_dublicates = [1,1,2,3,4,55,6,7,7,8]
 
 def remove_dublicates(list):
@@ -56,7 +56,7 @@ def remove_dublicates(list):
     print new_list
 
 remove_dublicates(list_dublicates)
-########################Task6 - Sort list by last element of tuple inside of list########################
+########################Task6 - Sort list by last element of tuple inside of list ########################
 def last(n): return n[-1]
 
 def sort_list_last(tuples):
@@ -72,4 +72,45 @@ def check_list(list):
         print "Not empty %s" %list
 check_list(emply_list)
 
+########################Task8 - find the list of words that are longer than n from a given list of words ########################
 
+
+sentance = "Hello my name is Eugene"
+
+def longer_then(n,str):
+    word_len = []
+    txt = str.split(" ")
+    for i in txt:
+        if len(i) > n:
+            word_len.append(i)
+    return word_len
+
+print longer_then(1,sentance)
+
+########################Task9 - removing the 0th, 4th and 5th elements ########################
+
+color = ['Red', 'Green', 'White', 'Black', 'Pink', 'Yellow']
+color = [x for (i,x) in enumerate(color) if i not in (0,4,5)]
+print(color)
+
+########################Task10 - Battleship Game ########################
+battleship =[
+    [1,0,1,1,0,1,0,0,0,0],
+    [0,0,0,0,0,1,0,0,1,0],
+]
+print "COORDENATES WHRE THE SHIPS ARE:"
+
+
+def find_ship(array):
+    l = 1
+    for i,k in enumerate(battleship):
+        print ""
+        print "X:Y LINE %s:"% l
+        print ""
+        l += 1
+        for x,y in enumerate(battleship[i]):
+            if y == 1:
+                print ("%s:%s"% (x, i))
+            else:
+                print None
+find_ship(battleship)
