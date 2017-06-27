@@ -131,9 +131,35 @@ def pin_latin(sentence):
         new_sentence += word + ' '
     return new_sentence.rstrip()
 
-            
-
-
-
 
 print pin_latin("Ello is the Youtube channel")
+
+######################## Task12 - Count Things in File ########################
+def count_words(path):
+    with open(path) as f:
+        count_strings = 0
+        count_words = 0
+        count_chars = 0
+        for line in f:
+            words = line.split()
+            count_words += len(words)
+            count_strings += 1
+            count_chars += len(line)
+        print count_strings
+        print count_words
+        print count_chars
+
+######################## Task13 - Concatenate dictionaries ########################
+dic1={1:10, 2:20} 
+dic2={3:30, 4:40} 
+dic3={5:50,6:60}
+
+dic = {}
+
+for i in (dic1,dic2,dic3):
+    dic.update(i)
+print dic
+
+######################## Task14 - Concatenate dictionaries ########################
+
+
