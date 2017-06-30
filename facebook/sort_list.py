@@ -160,6 +160,49 @@ for i in (dic1,dic2,dic3):
     dic.update(i)
 print dic
 
-######################## Task14 - Concatenate dictionaries ########################
+######################## Task14 - Generate and print a dictionary that contains a number (between 1 and n) in the form (x, x*x) ########################
+n=int(input("Input a number: "))
+d = dict()
 
+for x in range(1,n+1):
+    d[x]=x*x
+
+print(d)
+
+######################## Task15 ######################## 
+string = "abcing"
+
+def swipe(str):
+    if len(str) > 2:
+        if str[-3:] == 'ing':
+            print str[0:3] + 'ly'
+    elif len(str) > 3:
+        print str + 'ing'
+    elif len(str) < 3:
+        print str 
+swipe(string)
+
+######################## Task16 ########################
+def not_poor(str1):
+  snot = str1.find('not')
+  sbad = str1.find('poor')
+
+  if sbad > snot:
+    str1 = str1.replace(str1[snot:(sbad+4)], 'good')
+
+  return str1
+print(not_poor('The lyrics is not that poor!'))
+######################## Task17 Get pid of user from /etc/passwd ########################
+def get_userid(user):
+    user_pid = {}
+    with open('/etc/passwd') as f:
+        for line in f:
+            currentline = line.split(':')
+            user_name = currentline[0].replace('_', "")
+            user_id = (currentline[2:3])
+            user_pid[user_name] = user_id
+        for key, value in user_pid.items():
+            if key == user:
+                print str(value[0])
+get_userid("root")
 
