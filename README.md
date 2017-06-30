@@ -1,1 +1,2 @@
-# other
+JUST AN EXAMPLES TO PYTHON SCREEN CODE INTERVIEW
+My personal training
