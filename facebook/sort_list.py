@@ -206,3 +206,24 @@ def get_userid(user):
                 print str(value[0])
 get_userid("root")
 
+##### Task18 Print prime numbers ##### 
+
+
+in_list = [ 1, 12, 131, 11, 17, 21 ,2143 ]
+out_list = []
+
+def isprime(n):
+    if n == 1:
+        return False
+    for x in range(2, n):
+        if n % x == 0:
+            return False
+        else:
+            return out_list.append(n)
+
+            
+out_list = []
+for i in in_list:
+     isprime(i)
+    
+print out_list
