@@ -5,9 +5,9 @@ list.sort(key=int)
 list1 =  list[0:3]
 list2 = list[3:]
 list_end = list2 + list1
+print list_end
 
 ##### Task2 - Generate list for sort [1,2,3,5,6,0,0,0] #####
-print list_end
 
 
 mylist = [5,2,0,3,0,1,6,0]
@@ -35,6 +35,7 @@ def con_word(list):
         word += list[key]
     print word
 con_word(my_list)
+
 ##### Task4 - Print quantity of values from the list which have the same value in [1:-1] #####    
 count_str = ['abc', 'xyz', 'aba', '1221']
 
