@@ -228,3 +228,48 @@ for i in in_list:
      isprime(i)
     
 print out_list
+
+
+
+##### Task 19 Fibonacci ####
+# recursion method
+
+def fibonacci1(n):
+      if n == 1 or n == 2:
+         return 1
+     return fibonacci1(n -1) + fibonacci1(n -2 )
+
+
+for i in range(1,10):
+     print (fibonacci1(i))
+        
+#loop method
+def fibonacci2(n):
+         a,b = 1,1
+         for i in range(n-1):
+             a,b = b, a + b
+             print (a)
+             return a
+#generator method 
+ def fibgen(num):
+     a,b = 0,1
+     for i in range(0, num):
+         yield "{}: {}".format(i+1, a)
+         a,b = b, a + b
+for item in fibgen(10):
+    print(item)
+#### Task 20 FizzBuzz ####
+for num in range(1, 21):
+    if num % 3 == 0 and num % 5 == 0:
+        print('FizzBuzz')
+    elif num % 3 == 0:
+        print('Fizz')
+    elif num % 5 == 0:
+        print('Buzz')
+    else:
+        print(num)
+        
+### Task 21 Square the numbers. How to use list comprehensive ####
+my_list = [1,2,3,4,5,6,7,8,9,10]
+squared = [num*num for num in my_list]
+print (squared)
